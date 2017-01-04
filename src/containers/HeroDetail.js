@@ -94,7 +94,7 @@ class HeroDetail extends Component {
   getHeroInfos() {
     return (
       <div style={{ display: 'flex', flexFlow: 'column wrap', justifyContent: 'center', alignItems: 'center' }}>
-        <img alt={this.props.hero.name} src={this.state.imgErr ? cfg.defaultImgUrl : this.props.hero.thumbnail.path} onError={this.handleError} style={{ display: 'flex', width: 300 + 'px' }} />
+        <img alt={this.props.hero.name} src={this.state.imgErr ? cfg.defaultImgUrl : this.props.hero.thumbnail.path + "/standard_xlarge." + this.props.hero.thumbnail.extension} onError={this.handleError} style={{ display: 'flex', width: 300 + 'px' }} />
         <h1 style={{ display: 'flex' }}>{this.props.hero.name}</h1>
         <div style={{ display: 'flex' }}>
           {this.props.hero.description}

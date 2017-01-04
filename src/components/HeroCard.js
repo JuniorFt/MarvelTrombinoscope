@@ -52,7 +52,7 @@ class HeroCard extends Component {
     return (
       <Card key={this.props.data.id} style={{ width: 300 + 'px', margin: '15px', display: 'inline-flex' }}>
         <CardMedia>
-            <img onClick={this.changePath} alt={this.props.data.name} src={this.state.imgErr ? cfg.defaultImgUrl : this.props.data.thumbnail.path} onError={this.handleError} style={{ width: 300 + 'px' }} />
+            <img onClick={this.changePath} alt={this.props.data.name} src={this.state.imgErr ? cfg.defaultImgUrl : this.props.data.thumbnail.path + "/standard_xlarge." + this.props.data.thumbnail.extension} onError={this.handleError} style={{ width: 300 + 'px' }} />
         </CardMedia>
         <CardTitle title={this.props.data.name} titleStyle={{fontSize: 100 + '%'}} />
         {this.getDetails()}
